@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import PageObjectModel.*;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,7 +19,7 @@ public class mytest_steps{
     BooksPage booksPage;
     BookDetailPage bookDetailPage;
     CartPage cartPage;
-    public WebDriver driver;
+    public static WebDriver driver;
 
     @Given("^go to website$")
     public void go_to_website() throws Throwable {
@@ -71,6 +72,13 @@ public class mytest_steps{
             System.out.println("Added to cart!");
         } else {
             System.out.println("Not added to cart!");
+        }
+    }
+
+    @AfterAll
+    public static void afterAll(){
+        if (driver != null) {
+            driver.quit();
         }
     }
 }

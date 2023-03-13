@@ -13,8 +13,6 @@ public class BasePage {
     }
 
     public WebElement find(By locator){
-
-
         return driver.findElement(locator);
     }
 
