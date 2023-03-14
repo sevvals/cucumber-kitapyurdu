@@ -19,3 +19,4 @@ Feature: authentication
     Examples:
       | email | password |
       | sevval@gmail.com    | 321sa   |
+      | sevvalakilli00@gmail.com | 654321sa |

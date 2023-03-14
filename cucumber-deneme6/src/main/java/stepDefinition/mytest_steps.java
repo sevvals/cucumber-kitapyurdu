@@ -74,7 +74,6 @@ public class mytest_steps{
             System.out.println("Not added to cart!");
         }
     }
-
     @AfterAll
     public static void afterAll(){
         if (driver != null) {
